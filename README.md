@@ -1,28 +1,32 @@
 # Deborah Loring – Portfolio
 
-Welcome to the official source code for my professional software development portfolio, hosted at [deborahloring.com](https://www.deborahloring.com). This project demonstrates my frontend development capabilities and is designed to be clean, modular, and scalable.
+Welcome to the official source code for my professional software development portfolio, hosted at [deborahloring.com](https://www.deborahloring.com), my personal portfolio showcasing front-end development, UI design, and automation-ready architecture. This project highlights clean code principles, modular design, and modern web practices with light/dark mode accessibility and responsive layout.
 
 ---
 
 ## Features
 
-- **Responsive multi-page layout** using HTML5, CSS3, and Bootstrap 5
-- **Reusable components** (navigation bar, footer) implemented via JavaScript includes
-- **Dark mode toggle** with persistent styling
-- **Back to Top button** for improved navigation
-- **Hosted on GitHub Pages** with a custom domain
+- **Responsive design** using Bootstrap 5 and semantic HTML5
+- **Reusable components**: navigation and footer via HTML includes
+- **Dark mode support** respecting OS preference and saved locally
+- **Animated icon toggle** with Font Awesome
+- **Smooth back-to-top navigation button**
+- **AOS animations** for polished scrolling
+- **Deployed via GitHub Pages** with a custom domain
 
 ---
 
 ## Technologies Used
 
-| Category        | Stack/Tools Used                          |
-|-----------------|--------------------------------------------|
-| HTML/CSS        | HTML5, CSS3, Bootstrap 5 (CDN)             |
-| JavaScript      | Vanilla JS for interactivity and includes  |
-| UI Enhancements | Font Awesome, Dark Mode, Back-to-Top       |
-| Hosting         | GitHub Pages, Custom Domain                |
-| Version Control | Git, GitHub                                |
+| Category         | Stack / Tools                                |
+|------------------|----------------------------------------------|
+| Structure        | HTML5, Bootstrap 5 (CDN)                     |
+| Styling          | CSS3, Google Fonts, Font Awesome             |
+| Interactivity    | Vanilla JavaScript, matchMedia, localStorage |
+| Components       | Dynamic `navbar.html` and `footer.html`      |
+| Enhancements     | Animate On Scroll (AOS), transition effects  |
+| Hosting          | GitHub Pages + Custom Domain                 |
+| Version Control  | Git & GitHub                                 |
 
 ---
 
@@ -37,10 +41,10 @@ portfolio/
 ├── contact/
 │ └── index.html # Contact and social links
 ├── includes/
-│ ├── navbar.html # Shared navigation bar
+│ ├── navbar.html # Shared navigation
 │ └── footer.html # Shared footer
 ├── assets/
-│ ├── css/styles.css # Custom styling
+│ ├── css/styles.css # Custom theming (light/dark)
 │ └── js/
 │ ├── include.js # HTML includes loader
 │ └── script.js # Dark mode + back-to-top
@@ -53,28 +57,37 @@ portfolio/
 
 To preview locally:
 
-1. Make sure Python is installed
-2. Run the local server from the root directory:
+1. Open terminal in project root
+2. Run a simple Pytyhon web server:
 
 ```bash
 python -m http.server
-Open your browser to:
+```
+Open your browser to: http://localhost:8000/
 
-http://localhost:8000/
-Future Enhancements
-Add animated scroll transitions (AOS or GSAP)
+---
+## Future Enhancements
+ Project filtering or tag system (JS)
 
-Include interactive project filters
+ Integrated contact form via Formspree or Netlify Forms
 
-Integrate with a contact form handler (like Formspree or Netlify Forms)
+ Project case study subpages with screenshots or video
 
-Expand Projects section with case studies or screenshots
+ Lighthouse performance optimization & accessibility audit
 
-Author
-Deborah Loring
-QA Engineer | Software Developer | Data Analytics Graduate Student
-deborahloring.com
-GitHub • LinkedIn
+---
 
-License
+## Author
+
+**Deborah Loring**
+
+Software Engineer | QA Engineer | Data Analytics Graduate Student
+
+[deborahloring.com](https://www.deborahloring.com)
+
+[GitHub](https://github.com/HoneyBunny3) • [LinkedIn](https://www.linkedin.com/in/deborah-loring-2b60101a6/)
+
+---
+
+### License
 This project is open-source and available under the MIT License.
