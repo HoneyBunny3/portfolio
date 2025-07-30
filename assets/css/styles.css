@@ -72,6 +72,16 @@ body.dark-mode footer {
   background-color: #1f1f1f;
 }
 
+footer a {
+  color: #f8f9fa;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffffff; /* Full white on hover for clarity */
+}
+
 /* ----- Projects Section ----- */
 #projects {
   background-color: #ffffff;
@@ -174,7 +184,7 @@ body.dark-mode #contact a.text-dark {
 }
 
 body.dark-mode #contact a.text-dark:hover {
-  color: var(--primary); /* or #90cdf4 if you're not using CSS vars */
+  color: var(--primary);
 }
 
 /* CONTACT ICON STYLES */
@@ -185,14 +195,21 @@ body.dark-mode #contact a.text-dark:hover {
 }
 
 .contact-icon:hover {
-  color: var(--primary); /* or a specific hover color */
+  color: var(--primary);
 }
 
-/* Dark mode adjustments */
 body.dark-mode .contact-icon {
   color: #ccc;
 }
 
 body.dark-mode .contact-icon:hover {
   color: var(--primary);
+}
+
+.contact-icon i {
+  transition: transform 0.3s, color 0.3s;
+}
+.contact-icon:hover i {
+  transform: scale(1.2);
+  color: #0d6efd;
 }

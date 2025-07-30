@@ -61,25 +61,27 @@ function initInteractiveUI() {
   });
 
   // ============================================
-  // HIDE CURRENT PAGE NAV LINK
+  // NAVIGATION HIGHLIGHT AND HIDING LOGIC
   // ============================================
 
-  const path = window.location.pathname.toLowerCase();
-  let current = "home";
+  // Get the value of data-nav set on <body>
+  const navTarget = document.body.getAttribute("data-nav");
 
-  if (path.includes("/projects")) current = "projects";
-  else if (path.includes("/about")) current = "about";
-  else if (path.includes("/contact")) current = "contact";
-
-  // Hide the nav link for the current page
-  document.querySelectorAll(`[data-nav="${current}"]`).forEach(el => {
-    el.classList.add("d-none"); // Bootstrap-friendly
-  });
+  if (navTarget) {
+    // Hide ALL matching nav links for the current section
+    document.querySelectorAll(`[data-nav="${navTarget}"]`).forEach(navLink => {
+      navLink.classList.add("active");
+      // Only hide if more than 1 nav item exists
+      const totalNavLinks = navLink.closest("ul")?.querySelectorAll(".nav-link").length || 0;
+      if (totalNavLinks > 1) {
+        navLink.classList.add("d-none");
+      }
+    });
+  }
 }
 
 /**
- * Listen for custom event from include.js
- * Fires after all includes are loaded into the DOM
+ * Wait until all includes are loaded before initializing interactivity
  */
 document.addEventListener("includesLoaded", () => {
   initInteractiveUI();

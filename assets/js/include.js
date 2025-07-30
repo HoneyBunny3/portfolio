@@ -1,21 +1,33 @@
-// assets/js/include.js
-document.addEventListener("DOMContentLoaded", function () {
-  const includes = document.querySelectorAll("[data-include]");
-  let pending = includes.length;
+window.addEventListener("DOMContentLoaded", () => {
+  const includeElements = document.querySelectorAll("[data-include]");
+  let remaining = includeElements.length;
 
-  if (pending === 0) {
+  if (remaining === 0) {
     document.dispatchEvent(new Event("includesLoaded"));
     return;
   }
 
-  includes.forEach((el) => {
+  includeElements.forEach(el => {
     const file = el.getAttribute("data-include");
+
     fetch(file)
-      .then((res) => res.text())
-      .then((data) => {
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Failed to load ${file}`);
+        }
+        return response.text();
+      })
+      .then(data => {
         el.innerHTML = data;
-        pending--;
-        if (pending === 0) {
+        remaining--;
+        if (remaining === 0) {
+          document.dispatchEvent(new Event("includesLoaded"));
+        }
+      })
+      .catch(error => {
+        console.error("Include error:", error);
+        remaining--;
+        if (remaining === 0) {
           document.dispatchEvent(new Event("includesLoaded"));
         }
       });
