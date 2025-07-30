@@ -81,7 +81,7 @@ Open your browser to: http://localhost:8000/
 
 **Deborah Loring**
 
-Software Engineer | QA Engineer | Data Analytics Graduate Student
+Software Developer | QA Engineer | Data Analytics Graduate Student
 
 [deborahloring.com](https://www.deborahloring.com)
 

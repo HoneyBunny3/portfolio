@@ -14,18 +14,17 @@ footer,
 ======================================= */
 body.dark-mode {
   background-color: #121212;
+  color: #f0f0f0;
 }
 
-/* Projects section light and dark mode */
-#projects {
-  background-color: #ffffff;
+body.dark-mode p,
+body.dark-mode li {
+  color: #ccc;
 }
 
-body.dark-mode #projects {
-  background-color: #181818;
-}
-
-body.dark-mode h2 {
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
   color: #ffffff;
 }
 
@@ -49,6 +48,15 @@ body.dark-mode header .lead {
 body.dark-mode .navbar,
 body.dark-mode footer {
   background-color: #1f1f1f;
+}
+
+/* ----- Projects Section ----- */
+#projects {
+  background-color: #ffffff;
+}
+
+body.dark-mode #projects {
+  background-color: #181818;
 }
 
 /* ----- Cards ----- */

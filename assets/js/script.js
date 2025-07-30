@@ -16,8 +16,8 @@ function initInteractiveUI() {
 
   if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
     document.body.classList.add('dark-mode');
-    modeIcon.classList.remove('fa-moon');
-    modeIcon.classList.add('fa-sun');
+    modeIcon?.classList.remove('fa-moon');
+    modeIcon?.classList.add('fa-sun');
   }
 
   // Handle dark/light mode toggle
@@ -25,17 +25,17 @@ function initInteractiveUI() {
     const isDark = document.body.classList.toggle('dark-mode');
 
     // Animate icon rotation
-    modeIcon.classList.add('rotate');
-    setTimeout(() => modeIcon.classList.remove('rotate'), 500);
+    modeIcon?.classList.add('rotate');
+    setTimeout(() => modeIcon?.classList.remove('rotate'), 500);
 
     // Swap icons and save preference
     if (isDark) {
-      modeIcon.classList.remove('fa-moon');
-      modeIcon.classList.add('fa-sun');
+      modeIcon?.classList.remove('fa-moon');
+      modeIcon?.classList.add('fa-sun');
       localStorage.setItem('theme', 'dark');
     } else {
-      modeIcon.classList.remove('fa-sun');
-      modeIcon.classList.add('fa-moon');
+      modeIcon?.classList.remove('fa-sun');
+      modeIcon?.classList.add('fa-moon');
       localStorage.setItem('theme', 'light');
     }
   });
@@ -76,3 +76,11 @@ function initInteractiveUI() {
     el.classList.add("d-none"); // Bootstrap-friendly
   });
 }
+
+/**
+ * Listen for custom event from include.js
+ * Fires after all includes are loaded into the DOM
+ */
+document.addEventListener("includesLoaded", () => {
+  initInteractiveUI();
+});

@@ -1,18 +1,23 @@
 // assets/js/include.js
-document.addEventListener("DOMContentLoaded", async function () {
+document.addEventListener("DOMContentLoaded", function () {
   const includes = document.querySelectorAll("[data-include]");
-  const fetches = Array.from(includes).map(async (el) => {
-    const file = el.getAttribute("data-include");
-    const response = await fetch(`/includes/${file}`);
-    const content = await response.text();
-    el.innerHTML = content;
-  });
+  let pending = includes.length;
 
-  // Wait for all includes to finish loading
-  await Promise.all(fetches);
-
-  // Now safely run back-to-top and dark mode setup
-  if (typeof initInteractiveUI === "function") {
-    initInteractiveUI();
+  if (pending === 0) {
+    document.dispatchEvent(new Event("includesLoaded"));
+    return;
   }
+
+  includes.forEach((el) => {
+    const file = el.getAttribute("data-include");
+    fetch(file)
+      .then((res) => res.text())
+      .then((data) => {
+        el.innerHTML = data;
+        pending--;
+        if (pending === 0) {
+          document.dispatchEvent(new Event("includesLoaded"));
+        }
+      });
+  });
 });
