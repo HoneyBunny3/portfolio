@@ -1,0 +1,26 @@
+/* assets/css/styles.css */
+
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .navbar,
+body.dark-mode footer {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode .card {
+  background-color: #2c2c2c;
+  border-color: #444;
+}
+
+body.dark-mode .btn-outline-light {
+  border-color: #bbb;
+  color: #fff;
+}
+
+body.dark-mode .btn-outline-light:hover {
+  background-color: #fff;
+  color: #000;
+}

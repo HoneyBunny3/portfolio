@@ -1,4 +1,4 @@
-# Deborah Loring – DPortfolio
+# Deborah Loring – Portfolio
 
 Welcome to the official source code for my professional software development portfolio, hosted at [deborahloring.com](https://www.deborahloring.com). This project demonstrates my frontend development capabilities and is designed to be clean, modular, and scalable.
 
