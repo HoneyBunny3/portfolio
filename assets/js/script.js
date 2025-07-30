@@ -1,9 +1,16 @@
+/**
+ * initInteractiveUI
+ * Initializes theme preference, back-to-top behavior, and dynamic navbar updates
+ */
 function initInteractiveUI() {
-  const backToTopBtn = document.getElementById('backToTop');
+  // ============================================
+  // DARK MODE SETUP
+  // ============================================
+
   const toggleBtn = document.getElementById('darkModeToggle');
   const modeIcon = document.getElementById('modeIcon');
 
-  // Determine initial theme
+  // Load and apply saved theme or system preference
   const savedTheme = localStorage.getItem('theme');
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
@@ -13,7 +20,7 @@ function initInteractiveUI() {
     modeIcon.classList.add('fa-sun');
   }
 
-  // Handle toggle click
+  // Handle dark/light mode toggle
   toggleBtn?.addEventListener('click', () => {
     const isDark = document.body.classList.toggle('dark-mode');
 
@@ -33,7 +40,13 @@ function initInteractiveUI() {
     }
   });
 
-  // Back to Top behavior
+  // ============================================
+  // BACK TO TOP BUTTON BEHAVIOR
+  // ============================================
+
+  const backToTopBtn = document.getElementById('backToTop');
+
+  // Show or hide back-to-top button based on scroll position
   window.addEventListener('scroll', () => {
     if (window.scrollY > 300) {
       backToTopBtn?.classList.add('show');
@@ -42,7 +55,24 @@ function initInteractiveUI() {
     }
   });
 
+  // Scroll to top on button click
   backToTopBtn?.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ============================================
+  // HIDE CURRENT PAGE NAV LINK
+  // ============================================
+
+  const path = window.location.pathname.toLowerCase();
+  let current = "home";
+
+  if (path.includes("/projects")) current = "projects";
+  else if (path.includes("/about")) current = "about";
+  else if (path.includes("/contact")) current = "contact";
+
+  // Hide the nav link for the current page
+  document.querySelectorAll(`[data-nav="${current}"]`).forEach(el => {
+    el.classList.add("d-none"); // Bootstrap-friendly
   });
 }
