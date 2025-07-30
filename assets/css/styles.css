@@ -76,10 +76,21 @@ footer a {
   color: #f8f9fa;
   text-decoration: underline;
   transition: color 0.3s ease;
+  font-size: 0.9rem;
 }
 
 footer a:hover {
-  color: #ffffff; /* Full white on hover for clarity */
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-links {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+footer small {
+  font-size: 0.85rem;
 }
 
 /* ----- Projects Section ----- */

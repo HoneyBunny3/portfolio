@@ -1,18 +1,19 @@
 # Deborah Loring – Portfolio
 
-Welcome to the official source code for my professional software development portfolio, hosted at [deborahloring.com](https://www.deborahloring.com), my personal portfolio showcasing front-end development, UI design, and automation-ready architecture. This project highlights clean code principles, modular design, and modern web practices with light/dark mode accessibility and responsive layout.
+Welcome to the official source code for my professional software development portfolio, hosted at [deborahloring.com](https://www.deborahloring.com). This project showcases front-end development, responsive design, and modular architecture with a strong focus on accessibility, clean code principles, and polished user experience.
 
 ---
 
 ## Features
 
-- **Responsive design** using Bootstrap 5 and semantic HTML5
-- **Reusable components**: navigation and footer via HTML includes
-- **Dark mode support** respecting OS preference and saved locally
-- **Animated icon toggle** with Font Awesome
-- **Smooth back-to-top navigation button**
-- **AOS animations** for polished scrolling
-- **Deployed via GitHub Pages** with a custom domain
+- **Responsive layout** using Bootstrap 5 and semantic HTML5
+- **Dark/light mode support** respecting OS preference with toggle
+- **Dynamic navigation and footer** via HTML includes
+- **Active nav highlighting** with current-page link auto-hidden
+- **Back-to-top button** with smooth scrolling
+- **AOS scroll animations** for enhanced visual flow
+- **Styled and spaced footer** with optional policy links
+- **Deployed via GitHub Pages** using a custom domain
 
 ---
 
@@ -23,7 +24,7 @@ Welcome to the official source code for my professional software development por
 | Structure        | HTML5, Bootstrap 5 (CDN)                     |
 | Styling          | CSS3, Google Fonts, Font Awesome             |
 | Interactivity    | Vanilla JavaScript, matchMedia, localStorage |
-| Components       | Dynamic `navbar.html` and `footer.html`      |
+| Components       | Dynamic (`navbar.html`, `footer.html`)       |
 | Enhancements     | Animate On Scroll (AOS), transition effects  |
 | Hosting          | GitHub Pages + Custom Domain                 |
 | Version Control  | Git & GitHub                                 |
@@ -31,23 +32,27 @@ Welcome to the official source code for my professional software development por
 ---
 
 ## 📁 Project Structure
+
 ```text
 portfolio/
-├── index.html # Homepage
+├── index.html                   # Home page
 ├── about/
-│ └── index.html # About Me page
+│   └── index.html               # About Me
 ├── projects/
-│ └── index.html # Projects portfolio
+│   └── index.html               # Project Portfolio
 ├── contact/
-│ └── index.html # Contact and social links
+│   └── index.html               # Contact and Social Links
+├── privacy.html                 # Privacy Policy (footer only)
+├── terms.html                   # Terms of Use (optional)
 ├── includes/
-│ ├── navbar.html # Shared navigation
-│ └── footer.html # Shared footer
+│   ├── navbar.html              # Shared Navigation
+│   └── footer.html              # Shared Footer
 ├── assets/
-│ ├── css/styles.css # Custom theming (light/dark)
-│ └── js/
-│ ├── include.js # HTML includes loader
-│ └── script.js # Dark mode + back-to-top
+│   ├── css/
+│   │   └── styles.css           # Light/dark theming and layout
+│   └── js/
+│       ├── include.js           # HTML include logic
+│       └── script.js            # Theme toggling, back-to-top, nav logic
 └── README.md
 ```
 
@@ -66,14 +71,14 @@ python -m http.server
 Open your browser to: http://localhost:8000/
 
 ---
+
 ## Future Enhancements
- Project filtering or tag system (JS)
 
- Integrated contact form via Formspree or Netlify Forms
-
- Project case study subpages with screenshots or video
-
- Lighthouse performance optimization & accessibility audit
+* Tag-based filtering system for projects
+* Interactive project case study pages
+* Contact form integration via Formspree or Netlify Forms
+* Accessibility & performance review with Lighthouse
+* Resume view/download tracking (privacy-friendly)
 
 ---
 
@@ -90,4 +95,5 @@ Software Developer | QA Engineer | Data Analytics Graduate Student
 ---
 
 ### License
+
 This project is open-source and available under the MIT License.
