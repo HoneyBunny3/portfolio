@@ -1,0 +1,30 @@
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS system files
+.DS_Store
+
+# VS Code settings
+.vscode/
+
+# Node.js
+node_modules/
+package-lock.json
+npm-debug.log
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+*.tmp
+
+# Thumbnails or cache
+Thumbs.db
+
+# Any private local test data
+*.env
+.env.*
