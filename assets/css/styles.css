@@ -112,6 +112,43 @@ body.dark-mode .card-body {
   color: #e0e0e0;
 }
 
+/* Under Construction Overlay */
+.under-construction .construction-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(250, 223, 99, 0.60);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.75rem;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.under-construction .overlay-text {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #000;
+  text-shadow: 1px 1px 2px #fff;
+}
+
+.under-construction .btn.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+body.dark-mode .under-construction .construction-overlay {
+  background-color: rgba(255, 193, 7, 0.85);
+}
+
+body.dark-mode .under-construction .overlay-text {
+  color: #000;
+}
+
 /* ----- Links and Buttons ----- */
 body.dark-mode a,
 body.dark-mode .btn-link {
