@@ -1,19 +1,19 @@
 # Deborah Loring – Portfolio
 
-Welcome to the official source code for my professional software development portfolio, hosted at [deborahloring.com](https://www.deborahloring.com). This project showcases front-end development, responsive design, and modular architecture with a strong focus on accessibility, clean code principles, and polished user experience.
+Welcome to the source code for my professional portfolio, hosted at [deborahloring.com](https://www.deborahloring.com). This site demonstrates front-end design, responsive layout techniques, modular architecture, and accessibility best practices. It also highlights my broader skills in quality engineering, software development, and user-centered design.
 
 ---
 
 ## Features
 
 - **Responsive layout** using Bootstrap 5 and semantic HTML5
-- **Dark/light mode support** respecting OS preference with toggle
-- **Dynamic navigation and footer** via HTML includes
-- **Active nav highlighting** with current-page link auto-hidden
+- **Dark/light mode toggle** with OS preference detection
+- **Modular HTML components** (`navbar.html`, `footer.html`) dynamically loaded
+- **Active nav highlighting** for current page
 - **Back-to-top button** with smooth scrolling
-- **AOS scroll animations** for enhanced visual flow
-- **Styled and spaced footer** with optional policy links
-- **Deployed via GitHub Pages** using a custom domain
+- **Scroll animations** powered by AOS.js
+- **Accessible design** and clean source structure
+- **Deployed via GitHub Pages** with a custom Squarespace-managed domain
 
 ---
 
@@ -21,10 +21,10 @@ Welcome to the official source code for my professional software development por
 
 | Category         | Stack / Tools                                |
 |------------------|----------------------------------------------|
-| Structure        | HTML5, Bootstrap 5 (CDN)                     |
+| Structure        | HTML5, Bootstrap 5 (via CDN)                 |
 | Styling          | CSS3, Google Fonts, Font Awesome             |
 | Interactivity    | Vanilla JavaScript, matchMedia, localStorage |
-| Components       | Dynamic (`navbar.html`, `footer.html`)       |
+| Components       | HTML includes via `include.js`               |
 | Enhancements     | Animate On Scroll (AOS), transition effects  |
 | Hosting          | GitHub Pages + Custom Domain                 |
 | Version Control  | Git & GitHub                                 |
@@ -39,20 +39,20 @@ portfolio/
 ├── about/
 │   └── index.html               # About Me
 ├── projects/
-│   └── index.html               # Project Portfolio
+│   └── index.html               # Projects Overview
 ├── contact/
-│   └── index.html               # Contact and Social Links
-├── privacy.html                 # Privacy Policy (footer only)
+│   └── index.html               # Contact + Social
+├── privacy.html                 # Privacy Policy (optional)
 ├── terms.html                   # Terms of Use (optional)
 ├── includes/
-│   ├── navbar.html              # Shared Navigation
+│   ├── navbar.html              # Shared Navbar
 │   └── footer.html              # Shared Footer
 ├── assets/
 │   ├── css/
-│   │   └── styles.css           # Light/dark theming and layout
+│   │   └── styles.css           # Custom styles and theming
 │   └── js/
-│       ├── include.js           # HTML include logic
-│       └── script.js            # Theme toggling, back-to-top, nav logic
+│       ├── include.js           # Load HTML partials
+│       └── script.js            # Nav logic, theme toggle, scroll
 └── README.md
 ```
 
@@ -60,7 +60,7 @@ portfolio/
 
 ## 🔧 Setup Instructions
 
-To preview locally:
+To preview my portfolio locally:
 
 1. Open terminal in project root
 2. Run a simple Pytyhon web server:
@@ -72,13 +72,13 @@ Open your browser to: http://localhost:8000/
 
 ---
 
-## Future Enhancements
+## Planned Enhancements
 
-* Tag-based filtering system for projects
-* Interactive project case study pages
-* Contact form integration via Formspree or Netlify Forms
-* Accessibility & performance review with Lighthouse
-* Resume view/download tracking (privacy-friendly)
+* Tag-based filtering system on the Projects page
+* Individual case study pages per project
+* Contact form integration (Formspree or Netlify Forms)
+* Lighthouse accessibility and performance audits
+* Resume tracking (privacy-safe PDF views/downloads)
 
 ---
 
